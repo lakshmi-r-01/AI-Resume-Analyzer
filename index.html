@@ -4,25 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h2>Upload Resume</h2>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="resume" required>
-        <button type="submit">Upload</button>
-    </form>
 
-    {% if skills %}
-        <h3>Extracted Skills:</h3>
-        <ul>
-            {% for skill in skills %}
-                <li>{{ skill }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+    <!-- Header Section -->
+    <header class="hero-section">
+        <div class="overlay">
+            <h1>AI-Powered Resume Screener</h1>
+            <p>Upload your resume & video pitch & get unbiased AI analysis instantly!</p>
+            <a href="#upload-section" class="cta-button">Get Started</a>
+        </div>
+    </header>
 
-    {% if experience %}
-        <h3>Years of Experience: {{ experience }}</h3>
-    {% endif %}
+    <!-- Upload Resume Section -->
+    <section id="upload-section" class="upload-container">
+        <h2>Upload Your Resume</h2>
+        <p>AI will analyze and extract key skills for ranking.</p>
+
+        <div class="upload-box">
+            <label for="resumeUpload">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <span>Click to Upload</span>
+            </label>
+            <input type="file" id="resumeUpload" accept=".pdf">
+        </div>
+
+        <button onclick="uploadResume()">Upload</button>
+    </section>
+
+    <!-- Upload Video Pitch Section -->
+    <section id="video-upload-section" class="upload-container">
+        <h2>Upload Your Video Pitch</h2>
+        <p>AI will analyze your communication skills.</p>
+
+        <div class="upload-box">
+            <label for="videoUpload">
+                <i class="fas fa-video"></i>
+                <span>Click to Upload</span>
+            </label>
+            <input type="file" id="videoUpload" accept="video/*">
+        </div>
+
+        <button onclick="uploadVideo()">Upload</button>
+    </section>
+
+    <!-- AI Analysis Section -->
+    <section class="analysis-container">
+        <h2>AI Resume Analysis</h2>
+        <div class="results">
+            <div class="result-box">
+                <h3>Extracted Skills</h3>
+                <p id="extractedSkills">No skills extracted yet.</p>
+            </div>
+            <div class="result-box">
+                <h3>Overall Score</h3>
+                <p id="overallScore">Not available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AI Resume Screener. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
