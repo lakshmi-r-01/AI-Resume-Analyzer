@@ -1,25 +1,179 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Deep Blue Gradient */
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background: url('https://source.unsplash.com/1600x900/?technology,ai,abstract') center/cover no-repeat; 
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
 }
 
-h2 {
-    color: #333;
+.overlay {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
 }
 
-form {
-    margin-bottom: 20px;
+.hero-section h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color: #ffcc29; /* Gold Accent */
+}
+
+.hero-section p {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #f4f4f4;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #ff4c60, #ff6a88);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 76, 96, 0.4);
+}
+
+.cta-button:hover {
+    background: linear-gradient(45deg, #ff6a88, #ff4c60);
+    transform: scale(1.05);
+}
+
+/* Upload Section */
+.upload-container {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #141E30, #243B55); /* Dark Blue */
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    margin: 40px auto;
+    width: 60%;
+}
+
+.upload-container h2 {
+    color: #00d9ff; /* Neon Blue */
+}
+
+.upload-box {
+    margin: 20px auto;
+    width: 280px;
+    padding: 40px;
+    background: #1e293b;
+    border-radius: 12px;
+    border: 3px dashed #00d9ff; /* Neon Border */
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-box:hover {
+    background: rgba(0, 217, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.upload-box label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #00d9ff;
+}
+
+.upload-box i {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.upload-box input {
+    display: none;
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
+    padding: 14px 25px;
     border: none;
+    background: linear-gradient(45deg, #ffcc29, #ffdd67); /* Gold */
+    color: #222;
+    font-weight: bold;
     cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+    box-shadow: 0px 5px 12px rgba(255, 204, 41, 0.4);
 }
 
 button:hover {
-    background-color: #45a049;
+    background: linear-gradient(45deg, #ffdd67, #ffcc29);
+    transform: scale(1.05);
+}
+
+/* AI Analysis Section */
+.analysis-container {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(to right, #2c5364, #0f2027);
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    margin: 40px auto;
+    width: 60%;
+}
+
+.analysis-container h2 {
+    color: #ffcc29; /* Gold */
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.result-box {
+    background: linear-gradient(145deg, #1a2a3a, #223b55);
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.result-box:hover {
+    background: #203a43;
+    transform: scale(1.05);
+}
+
+.result-box h3 {
+    color: #00d9ff;
+    font-size: 22px;
+}
+
+.result-box p {
+    font-size: 18px;
+    color: #e0e0e0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #000;
+    color: #ffcc29;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
