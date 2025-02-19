@@ -1,8 +1,5 @@
 # 📝 AI Resume Analyzer 🚀  
 
-![AI Resume Analyzer](https://your-image-link.com/banner.gif)  
-*(Replace the above link with an actual animated banner GIF showcasing your project.)*  
-
 An **AI-powered Resume Analyzer** that extracts skills and experience from resumes (**PDF/DOCX**) using **Flask, Spacy, and NLP**.  
 
 ---
